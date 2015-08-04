@@ -10,11 +10,6 @@ puts "What is your height in inches"
 
 my_height = gets.to_i
 
-
-#height_inches = 60
-
-#weight_pounds = 135
-
 height_centimeters = my_height * 2.54
 
 weight_kilograms = my_weight * 0.453592
