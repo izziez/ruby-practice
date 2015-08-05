@@ -1,19 +1,30 @@
 puts "What is temperature?"
 todays_temp = gets.chomp.to_i
 
-def going_hiking(temp)
-	if temp <= 85 && temp >= 50
-		puts "#{temp} degrees is perfect for hiking!"
-	elsif temp > 85 && temp <= 105
-		puts "#{temp} degrees is way to hot for hiking!"
-	elsif temp < 50 && temp >= -5
-		puts "#{temp} degrees is way to cold for hiking!"
-	else
+puts "is it raining- yes or no"
+todays_weather = gets.chomp.to_s
+
+
+def going_hiking(temp, rain)
+	
+	if temp > 105 || temp < -5	
+
 		puts "your thermostat is broken!"
+
+	elsif temp >= 50 && rain == "no"
+		
+		puts "#{temp} degrees is perfect for hiking!"
+
+	elsif temp >= 50 && rain == "yes"
+		puts "boo rain!"		
+	
+	else temp < 50 
+		
+		puts "#{temp} degrees is way to cold for hiking!"
 	end
 end
 
-going_hiking(todays_temp)
+going_hiking(todays_temp, todays_weather)
 
 
 # puts "What is temperature?"
